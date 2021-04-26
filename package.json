@@ -1,0 +1,25 @@
+{
+  "name": "fighting-games-api",
+  "version": "1.0.0",
+  "description": "an api for fighting games and their characters",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bonicelli-Mattia/fighting-games-api.git"
+  },
+  "author": "Mattia Bonicelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bonicelli-Mattia/fighting-games-api/issues"
+  },
+  "homepage": "https://github.com/Bonicelli-Mattia/fighting-games-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "nodemon": "^2.0.7"
+  }
+}
