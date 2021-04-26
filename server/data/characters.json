@@ -1,0 +1,12 @@
+{
+  "characters": [
+    {
+      "name": "Ryu",
+      "apperances": ["Street Fighter II", "Street Fighter III"]
+    },
+    {
+    "name": "Chun-Li",
+    "apperances": ["Street Fighter II", "Street Fighter Zero 3"]
+    }
+  ]
+}

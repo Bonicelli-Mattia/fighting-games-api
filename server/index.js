@@ -1,36 +1,11 @@
-const express = require('express');
-const { graphqlHTTP } = require('express-graphql');
-const { buildSchema } = require('graphql');
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require("./schema");
+const resolvers = require("./resolvers");
 
-const app = express();
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const schema = buildSchema(`
-    type Character {
-        name: String
-        appearances: [String]
-    }
+const PORT = 5000;
 
-    type Query {
-        characters: [Character]
-    }
-`);
-
-const rootValue = {
-    characters: [
-        {
-            name: "Ryu",
-            apperances: ["Street Fighter II", "Street Fighter III"]
-        },
-        {
-            name: "Chun-Li",
-            apperances: ["Street Fighter II", "Street Fighter Zero 3"]
-        }
-    ]
-};
-
-app.use(graphqlHTTP({
-    schema,
-    rootValue
-}));
-
-app.listen(8080, () => console.log("server started"));
+server.listen(PORT, () => {
+    console.log(`Server up on ${PORT}/graphql`);
+});
